@@ -1,6 +1,6 @@
 import { useAchv, useGoHome } from '@remake/hooks'
 import { judge, judgeGrade, judgeGradeByValue } from '@/config'
-import { rates } from '@/display'
+import { rates } from '@remake/data/etc/display'
 import { achievements, type Achievement } from '@remake/data'
 import { toastMsg } from '@/toast'
 import './Achv.css'

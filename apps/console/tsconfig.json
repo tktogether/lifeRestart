@@ -1,4 +1,13 @@
 {
   "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "jsx": "react-jsx",
+    "types": ["react", "node"],
+    "jsxImportSource": "react",
+    "paths": {
+      "@/*": ["./src/*"],
+    },
+  },
   "include": ["**/*"]
 }

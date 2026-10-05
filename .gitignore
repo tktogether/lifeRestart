@@ -111,3 +111,5 @@ __localStorage.json
 
 template/public
 public/data
+
+*.cache.*

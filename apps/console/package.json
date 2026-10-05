@@ -4,12 +4,22 @@
     "version": "3.0.0",
     "author": "Vick Scarlet <vick@syaro.io>",
     "scripts": {
-        "start": "bun run src/index.ts",
+        "dev": "bun --watch --watch-dir=src run src/index.tsx",
+        "start": "bun run src/index.tsx",
         "lint": "bunx --bun eslint .",
         "test": "bun test"
     },
     "dependencies": {
-        "@remake/core": "workspace:*",
-        "@remake/data": "workspace:*"
+        "@remake/data": "workspace:*",
+        "@remake/hooks": "workspace:*",
+        "@remake/vitex": "workspace:*",
+        "ink": "^7.1.1",
+        "ink-scroll-view": "^0.4.0",
+        "jotai": "^3.0.0",
+        "react": "^19.3.0"
+    },
+    "devDependencies": {
+        "@types/node": "^26.6.2",
+        "@types/react": "^19.3.0"
     }
 }

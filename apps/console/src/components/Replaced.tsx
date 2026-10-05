@@ -1,6 +1,6 @@
 import { type Talent as T, talents } from '@remake/data'
 import Talent from './Talent'
-import './Replaced.css'
+import { Box, Text } from '@/components'
 
 export interface TalentProps {
     id: T['id']
@@ -8,20 +8,21 @@ export interface TalentProps {
 }
 export function Replaced({ id, chains }: TalentProps) {
     return (
-        <ul className="replaced">
-            <li>
-                <Talent id={id} selected />
-            </li>
+        <Box flexDirection="column">
+            <Talent id={id} flexGrow={1} marginRight={2} />
             {chains?.map(id => {
                 const talent = talents.get(id)
                 if (!talent) return null
                 return (
-                    <li key={id}>
-                        <Talent id={id} />
-                    </li>
+                    <Box key={id} flexDirection="row">
+                        <Talent id={id} flexGrow={1} />
+                        <Box width={2}>
+                            <Text>⤶</Text>
+                        </Box>
+                    </Box>
                 )
             })}
-        </ul>
+        </Box>
     )
 }
 

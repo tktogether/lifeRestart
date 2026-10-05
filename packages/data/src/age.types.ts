@@ -30,12 +30,13 @@ export const transformers = {
             const { event, level } = handleEvent(v)
             const li = level < 0 ? ab[1]! : ab[0]!
             const l = Math.abs(level)
-            if (!li[l]) li[l] = []
+            li[l] ??= []
             li[l].push(event)
         }
+        ab[1]!.shift()
         const levels = ab[0]!.reverse().concat(ab[1]!)
         for (let i = 0; i < levels.length; i++) {
-            if (!levels[i]) levels[i] = []
+            levels[i] ??= []
             const level = levels[i]!
             const pow = level.reduce(
                 (pow, [, w]) =>
