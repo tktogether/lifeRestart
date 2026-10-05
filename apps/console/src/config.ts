@@ -1,9 +1,9 @@
 import type { Config } from '@remake/hooks'
 export const dev = {
-    locked: [
-        1142, 1143, 1144, 1145, 1146, 1086, 1122, 1111, 1130, 1048, 1033, 1085,
-    ],
-    max: 10,
+    // locked: [
+    //     1142, 1143, 1144, 1145, 1146, 1086, 1122, 1111, 1130, 1048, 1033, 1085,
+    // ],
+    // max: 10,
 } as Record<string, any>
 // if (import.meta.env.MODE === 'development') {
 //     new URLSearchParams(window.location.search)
