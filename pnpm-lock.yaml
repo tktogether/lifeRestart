@@ -28,7 +28,7 @@ importers:
         version: '@typescript/typescript6@6.0.2'
 
   apps/console:
-    dependencies:
+    devDependencies:
       '@remake/data':
         specifier: workspace:*
         version: link:../../packages/data
@@ -38,25 +38,27 @@ importers:
       '@remake/vitex':
         specifier: workspace:*
         version: link:../../packages/vitex
-      ink:
-        specifier: ^8.0.0
-        version: 8.0.0(@types/react@19.3.0)(react@19.3.0)
-      ink-scroll-view:
-        specifier: ^0.4.0
-        version: 0.4.0(ink@8.0.0(@types/react@19.3.0)(react@19.3.0))(react@19.3.0)
-      jotai:
-        specifier: ^3.0.1
-        version: 3.0.1(@types/react@19.3.0)(react@19.3.0)
-      react:
-        specifier: ^19.3.0
-        version: 19.3.0
-    devDependencies:
       '@types/node':
         specifier: ^26.6.4
         version: 26.6.4
       '@types/react':
         specifier: ^19.3.0
         version: 19.3.0
+      ink:
+        specifier: ^8.0.0
+        version: 8.0.0(@types/react@19.3.0)(react-devtools-core@8.0.0)(react@19.3.0)
+      ink-scroll-view:
+        specifier: ^0.4.0
+        version: 0.4.0(ink@8.0.0(@types/react@19.3.0)(react-devtools-core@8.0.0)(react@19.3.0))(react@19.3.0)
+      jotai:
+        specifier: ^3.0.1
+        version: 3.0.1(@types/react@19.3.0)(react@19.3.0)
+      react:
+        specifier: ^19.3.0
+        version: 19.3.0
+      react-devtools-core:
+        specifier: ^8.0.0
+        version: 8.0.0
 
   apps/web:
     dependencies:
@@ -1651,6 +1653,9 @@ packages:
     resolution: {integrity: sha512-k9lSsjl36EJdK7I06v7APZCbyGT2vMTsYSRX1Q2nbYmnkBqgUhRkAuzH08Ciotteu/PLJmIF2+tti7o3C/ts2g==}
     engines: {node: '>=18'}
 
+  react-devtools-core@8.0.0:
+    resolution: {integrity: sha512-DGXJX+sCn2zC3ZalHoJhmZJsvP4QTpERlmCQAOgExc4Vp74ywB9ZnO8992cKw5ZcOS5u8GtpchTUPbjTiu5zaw==}
+
   react-dom@19.3.0:
     resolution: {integrity: sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==}
     peerDependencies:
@@ -1755,6 +1760,10 @@ packages:
   shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+
+  shell-quote@1.12.0:
+    resolution: {integrity: sha512-PcByqNyT/38F2kDNi006HAMRJaULuBzq/FOsw3qdZvX/GA9W/jamDaRskgHjubHiftXK5sIFxLNkvrXUwcof6Q==}
+    engines: {node: '>= 0.4'}
 
   side-channel-list@1.0.1:
     resolution: {integrity: sha512-mjn/0bi/oUURjc5Xl7IaWi/OJJJumuoJFQJfDDyO46+hBWsfaVM65TBHq2eoZBhzl9EchxOijpkbRC8SVBQU0w==}
@@ -2030,6 +2039,18 @@ packages:
   wrap-ansi@10.0.2:
     resolution: {integrity: sha512-6OLRNZqRntVGBm26ghZ5eZhCuWWyOkRCSn8XsOIuq5stpCE/tjLbdozd93naILZig0lmD8ANfRwnhn0DLeXGlg==}
     engines: {node: '>=20'}
+
+  ws@7.5.13:
+    resolution: {integrity: sha512-rsKI6xDBFVf4r/x8XyChGK04QR/XHroxs/jUcoWvtEZM8TPU/X/uIY9B1CsSzYws9ZJb/6bbBu7dPhFW00CAoA==}
+    engines: {node: '>=8.3.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
 
   ws@8.22.0:
     resolution: {integrity: sha512-Ydggc987+RO0AnWtZ/7Wq9FtNvcrL1b/RO0ud9mWjUPgDrsAAwQSF51sm2hm1XofbU/4jkpGEsLFsZZxU+1DOg==}
@@ -3187,12 +3208,12 @@ snapshots:
 
   indent-string@5.0.0: {}
 
-  ink-scroll-view@0.4.0(ink@8.0.0(@types/react@19.3.0)(react@19.3.0))(react@19.3.0):
+  ink-scroll-view@0.4.0(ink@8.0.0(@types/react@19.3.0)(react-devtools-core@8.0.0)(react@19.3.0))(react@19.3.0):
     dependencies:
-      ink: 8.0.0(@types/react@19.3.0)(react@19.3.0)
+      ink: 8.0.0(@types/react@19.3.0)(react-devtools-core@8.0.0)(react@19.3.0)
       react: 19.3.0
 
-  ink@8.0.0(@types/react@19.3.0)(react@19.3.0):
+  ink@8.0.0(@types/react@19.3.0)(react-devtools-core@8.0.0)(react@19.3.0):
     dependencies:
       '@alcalzone/ansi-tokenize': 0.3.1
       ansi-escapes: 7.3.0
@@ -3220,6 +3241,7 @@ snapshots:
       yoga-layout: 3.2.1
     optionalDependencies:
       '@types/react': 19.3.0
+      react-devtools-core: 8.0.0
 
   internal-slot@1.1.0:
     dependencies:
@@ -3591,6 +3613,14 @@ snapshots:
 
   quick-lru@7.3.0: {}
 
+  react-devtools-core@8.0.0:
+    dependencies:
+      shell-quote: 1.12.0
+      ws: 7.5.13
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
   react-dom@19.3.0(react@19.3.0):
     dependencies:
       react: 19.3.0
@@ -3729,6 +3759,8 @@ snapshots:
       shebang-regex: 3.0.0
 
   shebang-regex@3.0.0: {}
+
+  shell-quote@1.12.0: {}
 
   side-channel-list@1.0.1:
     dependencies:
@@ -4031,6 +4063,8 @@ snapshots:
     dependencies:
       ansi-styles: 6.2.3
       string-width: 8.3.0
+
+  ws@7.5.13: {}
 
   ws@8.22.0: {}
 

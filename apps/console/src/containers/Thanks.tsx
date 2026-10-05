@@ -64,6 +64,7 @@ export function Thanks() {
                     maxWidth={40}
                     borderStyle="single"
                     borderColor={selected === 0 ? colors.primary : undefined}
+                    borderBackgroundColor={colors.background}
                 >
                     <Box flexDirection="column">
                         {group1.map((item, index) => (
@@ -78,6 +79,7 @@ export function Thanks() {
                     maxWidth={60}
                     borderStyle="single"
                     borderColor={selected === 1 ? colors.primary : undefined}
+                    borderBackgroundColor={colors.background}
                 >
                     <Box flexDirection="column">
                         {chunksMap(group2, 3, (chunks, index) => (

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useInit, useWatcher, useSelect } from '@/hooks'
 import { useStep, Step } from '@remake/hooks'
-import { useStdout, useApp, useInput } from 'ink'
+import { useWindowSize, useApp, useInput } from 'ink'
 import { Box, Text } from '@/components'
 import { colors } from '@/style'
 import { FocusProvider, useAppFocus } from '@/context/focus'
@@ -77,16 +77,10 @@ const Escape = ({ onCancel }: { onCancel?: () => void }) => {
 }
 
 export function GameContainer() {
-    const { stdout } = useStdout()
+    const { rows } = useWindowSize()
     const saving = useWatcher()
-    const [height, setHeight] = useState(stdout.rows)
     const [showEscape, setShowEscape] = useState(false)
     const focus = useAppFocus()
-    useEffect(() => {
-        stdout.on('resize', () => {
-            setHeight(stdout.rows)
-        })
-    }, [stdout])
     useEffect(() => {
         if (showEscape) {
             focus.setFocus('modal')
@@ -99,7 +93,7 @@ export function GameContainer() {
     })
     return (
         <Box
-            height={height}
+            height={rows}
             justifyContent="center"
             alignItems="center"
             backgroundColor={colors.background}
