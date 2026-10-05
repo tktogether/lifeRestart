@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'apps/console/package.json'
-
+  workflow_dispatch: {}
 permissions:
   contents: read
   id-token: write
