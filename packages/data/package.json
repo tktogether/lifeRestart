@@ -17,6 +17,10 @@
         "./*": {
             "types": "./dist/*.ts",
             "import": "./dist/*.ts"
+        },
+        "./etc/*": {
+            "types": "./etc/*.ts",
+            "import": "./etc/*.ts"
         }
     }
 }

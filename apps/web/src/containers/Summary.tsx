@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { usePicked, useEnd, useProfile, useIsClassic } from '@remake/hooks'
 import { useEndJudge } from '@/hooks/judge'
-import { properties, judgeDisplay } from '@/display'
+import { properties, judgeDisplay } from '@remake/data/etc/display'
 import { toastAchvs, toastMsg } from '@/toast'
 import Talent from '@/components/Talent'
 import './Summary.css'

@@ -17,10 +17,10 @@
         "@remake/hooks": "workspace:*",
         "@remake/thirdparty-bili-toy": "workspace:*",
         "@remake/vitex": "workspace:*",
-        "jotai": "^3.0.0",
+        "jotai": "^3.0.1",
         "react": "^19.3.0",
         "react-dom": "^19.3.0",
-        "react-hot-toast": "^2.6.0"
+        "react-hot-toast": "^2.6.1"
     },
     "devDependencies": {
         "@types/react": "^19.3.0",
@@ -28,7 +28,7 @@
         "@vitejs/plugin-react": "^6.1.1",
         "eslint-plugin-react": "^7.37.5",
         "eslint-plugin-react-hooks": "^7.1.1",
-        "vite": "^8.3.0",
-        "vitest": "^5.0.1"
+        "vite": "^8.3.2",
+        "vitest": "^5.0.3"
     }
 }

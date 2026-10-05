@@ -1,0 +1,7 @@
+export { default as Box } from './SBox'
+export type { SBoxProps as BoxProps } from './SBox'
+export { default as Text } from './SText'
+export type { STextProps as TextProps } from './SText'
+export { default as Talent } from './Talent'
+export { default as Replaced } from './Replaced'
+export { default as Achievement } from './Achievement'

@@ -67,3 +67,17 @@ export function zoneFit(value: number, zone: [number, number]) {
     if (value < min) return min
     return value
 }
+
+export function chunksMap<T, R>(
+    array: T[],
+    size: number,
+    mapFn: (chunk: T[], index: number) => R,
+): R[] {
+    const result: R[] = []
+
+    for (let i = 0; i < array.length; i += size) {
+        const chunk = array.slice(i, i + size)
+        result.push(mapFn(chunk, Math.floor(i / size)))
+    }
+    return result
+}
